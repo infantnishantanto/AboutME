@@ -131,10 +131,11 @@ app.get('/edit', (req, res) => {
 });
 
 app.get('/delete/:id', (req, res) => {
-    Content.findByIdAndDelete(req.params.id).then(() => {
-        res.redirect('/edit');
-    }).catch(err => console.log(err));
+    Content.findByIdAndDelete(req.params.id)
+        .then(() => res.redirect('/edit'))
+        .catch(err => console.error("Delete Error:", err));
 });
+
 
 app.get('/logout', (req, res) => {
     req.session.destroy();
