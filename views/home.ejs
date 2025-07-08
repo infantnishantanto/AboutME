@@ -1,18 +1,18 @@
-<%-include('layouts/header')-%>
+<%- include('layouts/header') -%>
 
 <% if (typeof logName != 'undefined') { %>
-    <%-include('layouts/nav')-%>
+    <%- include('layouts/nav') -%>
 <% } %>
 
-<%-include('layouts/navMain')-%>
+<%- include('layouts/navMain') -%>
 
 <aside class="aside">
     <% if (typeof page != 'undefined') { %>
-        <% if (page.imPath) { %>
-            <img src="<%= page.imPath %>" width="300px" />
+        <% if (page.image && page.image.data) { %>
+            <img src="/image/<%= page._id %>" width="300px" />
         <% } %>
         <%- page.content %>
     <% } %>
 </aside>
 
-<%-include('layouts/footer')-%>
+<%- include('layouts/footer') -%>
