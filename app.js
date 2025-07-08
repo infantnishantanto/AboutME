@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express')
 const path = require('path')
 const mongoose = require('mongoose')
@@ -32,8 +33,7 @@ const Content = mongoose.model('content', {
 });
 
 // mongoose.connect("mongodb://localhost:27017/Infant");
-const mongoURI = "mongodb+srv://infantnishant666:Qwertyuio123@infant.vqk35pq.mongodb.net/Infant?retryWrites=true&w=majority&appName=Infant";
-
+const mongoURI = process.env.MONGO_URI;
 mongoose.connect(mongoURI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
