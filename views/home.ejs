@@ -1,0 +1,18 @@
+<%-include('layouts/header')-%>
+<% if(typeof logName != 'undefined'){%>
+    <%-include('layouts/nav')-%>
+<%}%>
+<%-include('layouts/navMain')-%>
+
+<aside class="aside">
+   
+
+  <%  if (typeof page != 'undefined'){%>
+        <img src="<%=page.imPath%>" width="300px"/>
+    <%-page.content-%>
+<%} %>      
+       
+    
+  
+</aside>
+<%-include('layouts/footer')-%>

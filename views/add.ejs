@@ -1,0 +1,44 @@
+<%-include('layouts/header')-%> 
+<%-include('layouts/nav')-%>
+<main class ="addMain">
+    
+    <h3>Add New Content</h3>
+    <form id="form1" action="/add" method="post" enctype="multipart/form-data">
+
+        <div>
+            <label class="label2">Add Link Name:</label>
+            <input type="text" name="slug"/>
+        </div>
+        
+        <div>
+            <label class="label2">Add Image: </label>
+            <input type="text" name="fileName">
+            <input type="file" name="imFile" accept="image/*"/>
+        </div>
+
+        <div>
+            <label id="richLabel" class="label2">Content:</label>
+            <textarea id="richText" name="tar"></textarea>
+            <!-- Script element sourcing TinyMCE -->
+            <script type="application/javascript" src= "/tinymce/tinymce.min.js"></script>
+            <!-- Script element sourcing the TinyMCE configuration -->
+            <script type="application/javascript" src= "/js/editor.js"></script>
+        </div>
+
+        <div id ="addErrors">
+            <% if(typeof errors !='undefined'){
+                for(var er of errors){%>
+                    <p><%=er.msg%></p>
+                <%}
+            }%>
+        </div>
+        <div>
+            <input id="submit2" type="submit" value="submit"/>
+            <input id="submit2" type="reset" value="reset"/>        
+        </div>
+    
+    </form>
+
+
+</main>
+<%-include('layouts/footer')-%>

@@ -1,0 +1,49 @@
+<%-include('layouts/header')-%> 
+<%-include('layouts/nav')-%>
+<main class ="addMain">
+    
+    <h1>Add New Content</h1>
+    <form action="/update" method="post" enctype="multipart/form-data">
+
+        <div>
+            <label class="label2">Add Link Name:</label>
+            <input type="text" name="slug" value="<%=data.slug%>"/>
+        </div>
+        
+        <div>
+            <label class="label2">Add Image: </label>
+            <input type="text" name="fileName">
+            <input type="file" name="imFile" accept="image/*"/>
+        </div>
+        <div>
+            <img src="<%=data.imPath%>" width="200px"/>
+        </div>
+
+        <input type="hidden" value="<%=data._id%>" name="cMongoId"/>
+        <input type="hidden" value="<%=data.imPath%>"/>
+        <div>
+            <label id="richLabel" class="label2">Content:</label>
+            <textarea id="richText" name="tar" ><%-data.content-%></textarea>
+            <!-- Script element sourcing TinyMCE -->
+            <script type="application/javascript" src= "/tinymce/tinymce.min.js"></script>
+            <!-- Script element sourcing the TinyMCE configuration -->
+            <script type="application/javascript" src= "/js/editor.js"></script>
+        </div>
+
+        <div id ="addErrors">
+            <% if(typeof errors !='undefined'){
+                for(var er of errors){%>
+                    <p><%=er.msg%></p>
+                <%}
+            }%>
+        </div>
+        <div>
+            <input id="submit2" type="submit" value="submit"/>
+            <input id="submit2" type="reset" value="reset"/>        
+        </div>
+    
+    </form>
+
+
+</main>
+<%-include('layouts/footer')-%>

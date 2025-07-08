@@ -1,0 +1,99 @@
+body {
+    margin : auto;
+    width: 1200px;
+}
+table,td,th{
+    border: 2px solid black;
+    border-collapse: collapse;
+    margin: auto;
+    padding: 20px;
+}
+
+.head{
+    border:2px solid black;
+    display: flex;
+    padding: 10px;
+    
+    }
+.head h1 {
+    text-align: center;
+    padding: 10px;
+    margin-left: 400px;
+} 
+
+.slug {
+        border: 2px solid black;
+        padding: 10px;
+        text-align: center;
+        
+}
+.slug a{
+    margin : 10px
+}
+.nav2{
+    border: 2px solid black;
+    padding: 10px;
+    
+}
+.aside{
+    border: 2px solid black;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+.footer{
+    border: 2px solid black;
+    text-align: center;
+    padding: 10px;
+}
+
+.login{
+    border: 2px solid black;
+    padding: 10px;
+    text-align: center;
+        
+}
+
+#input {
+    width: 200px;
+       
+}
+
+.label{
+    display: inline-block;
+    width: 100px;
+    margin: 10px;
+}
+
+.submit{
+    margin:10px;
+    
+}
+
+.addMain {
+    border: 2px solid black;
+    padding: 20px;
+}
+
+.label2{
+    width: 200px;
+    display: inline-block;
+    margin: 10px;
+}
+
+#submit2{
+    margin:10px;
+    border: 2px solid black;
+}
+
+.welcome{
+    border: 2px solid black;
+    text-align: center;
+}
+
+.navIn{
+    padding: 10px;
+}
+.navIn a{
+    margin: 10px;
+}

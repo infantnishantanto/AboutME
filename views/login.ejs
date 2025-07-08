@@ -1,0 +1,41 @@
+<%-include('layouts/header')-%>
+<main>
+    
+    <form class="login" action="/login" method="post">
+        <h2>Login</h2>
+        <div >
+            <label class="label">UserName:</label>
+            <input type="text" name="uname" id="input"/>
+        </div>
+
+        <div>
+            <label class="label">Password:</label>
+            <input type="password" name="passwd" id="input"/>
+        </div>
+        <div class="submit">
+            <input type="submit" value="Login"/>
+            <input type="reset" value="Reset"/>
+        </div>
+        <div id="formError">
+            <% if(typeof formErrors != 'undefined'){
+                for(var er of formErrors){%>
+                    <p><%=er.msg%></p>
+                <%}
+            } %>
+        
+        </div>
+        
+        <div id="authError">
+            <% if(typeof authErrors != 'undefined'){
+                for(var er of authErrors){%>
+                    <p><%=er.msg%></p>
+                <%}
+            } %>
+        
+        
+        </div>
+    </form>
+
+</main>
+
+<%-include('layouts/footer')-%>

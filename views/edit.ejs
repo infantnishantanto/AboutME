@@ -1,0 +1,18 @@
+<%-include('layouts/header')-%>
+<%-include('layouts/nav')-%>
+<main class="addMain">
+    
+    <h3>View Content</h3>
+    <% if (typeof data != 'undefined'){
+        %>
+        <table><tbody><tr><th>Page</th><th>Manage</th><th>Manage</th></tr>
+        <%
+        for(var dt of data){%>
+            <tr><td><a href="/page/<%=dt._id%>"><%=dt.slug%></a></td><td><a href="/update/<%=dt._id%>">Edit</a></td><td><a href="/delete/<%=dt._id%>&delete">Delete</a></td></tr>
+        <%}%>
+        </tbody></table>   
+    <%
+    }%>
+   
+</main>
+<%-include('layouts/footer')-%>

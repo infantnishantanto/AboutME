@@ -1,0 +1,15 @@
+<%-include('layouts/header')-%> 
+
+<%-include('layouts/nav')-%>
+
+<main class="welcome">
+    
+   
+    <%if(typeof message !='undefined' && message != "login"){%>
+
+            <h3><%=message%></h3>
+   <% }%> 
+
+</main>
+
+<%-include('layouts/footer')-%>
