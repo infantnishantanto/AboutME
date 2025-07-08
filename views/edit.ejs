@@ -8,7 +8,7 @@
         <table><tbody><tr><th>Page</th><th>Manage</th><th>Manage</th></tr>
         <%
         for(var dt of data){%>
-            <tr><td><a href="/page/<%=dt._id%>"><%=dt.slug%></a></td><td><a href="/update/<%=dt._id%>">Edit</a></td><td><a href="/delete/<%= item._id %>">Delete</a>
+            <tr><td><a href="/page/<%=dt._id%>"><%=dt.slug%></a></td><td><a href="/update/<%=dt._id%>">Edit</a></td><td><a href="/delete/<%= dt._id %>">Delete</a>
 </td></tr>
         <%}%>
         </tbody></table>   
