@@ -1,18 +1,18 @@
-<%-include('layouts/header')-%>
-<% if(typeof logName != 'undefined'){%>
-    <%-include('layouts/nav')-%>
-<%}%>
-<%-include('layouts/navMain')-%>
+<%- include('layouts/header') -%>
+
+<% if (typeof logName !== 'undefined') { %>
+    <%- include('layouts/nav') -%>
+<% } %>
+
+<%- include('layouts/navMain') -%>
 
 <aside class="aside">
-   
-
-  <%  if (typeof page != 'undefined'){%>
-        <img src="/image/<%= page._id %>" width="300px" />
-    <%-page.content-%>
-<%} %>      
-       
-    
-  
+    <% if (typeof page !== 'undefined') { %>
+        <% if (page.imPath) { %>
+            <img src="/image/<%= page._id %>" width="300px" />
+        <% } %>
+        <%- page.content %>
+    <% } %>
 </aside>
-<%-include('layouts/footer')-%>
+
+<%- include('layouts/footer') -%>
