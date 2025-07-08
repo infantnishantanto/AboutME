@@ -15,7 +15,8 @@
     "express-fileupload": "^1.5.1",
     "express-session": "^1.18.1",
     "express-validator": "^7.2.1",
-    "mongoose": "^8.13.2",
+    "mongoose": "^8.16.2",
+    "multer": "^2.0.1",
     "tinymce": "^7.8.0"
   }
 }
